@@ -14,6 +14,9 @@ describe "Indenting" do
     <<-EOF
       def do_something(f),
         do: true
+
+      def do_something_else(f),
+        do: true
     EOF
     .should be_elixir_indentation
   end

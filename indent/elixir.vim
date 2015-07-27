@@ -112,8 +112,13 @@ function! GetElixirIndent()
       let ind += &sw
     endif
 
+    " indent function definition with shorthand on new line 'do:'
     if current_line =~ s:block_shorthand
       let ind += &sw
+    endif
+
+    if last_line =~ s:block_shorthand
+      let ind -= &sw
     endif
 
   endif
