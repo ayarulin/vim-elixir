@@ -12,7 +12,7 @@ describe "Indenting" do
 
   it "'do:' on new line indenting" do
     <<-EOF
-      def f,
+      def do_something(f),
         do: true
     EOF
     .should be_elixir_indentation
