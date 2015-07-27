@@ -23,7 +23,7 @@ set cpo&vim
 let s:skip_syntax  = '\%(Comment\|String\)$'
 let s:block_skip   = "synIDattr(synID(line('.'),col('.'),1),'name') =~? '" . s:skip_syntax . "'"
 let s:block_start  = 'do\|fn'
-let s:block_shorthand =~ '^\s*\(do:\).*$'
+let s:block_shorthand = '^\s*\(do:\).*$'
 let s:block_middle = 'else\|match\|elsif\|catch\|after\|rescue'
 let s:block_end    = 'end'
 let s:symbols_end  = '\]\|}'
