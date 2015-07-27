@@ -10,6 +10,14 @@ describe "Indenting" do
     .should be_elixir_indentation
   end
 
+  it "'do:' on new line indenting" do
+    <<-EOF
+      def f,
+        do: true
+    EOF
+    .should be_elixir_indentation
+  end
+
   it "does not consider :end as end" do
     <<-EOF
       defmodule Test do
@@ -29,4 +37,5 @@ describe "Indenting" do
     EOF
     .should be_elixir_indentation
   end
+
 end
